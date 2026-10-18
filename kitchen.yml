@@ -61,8 +61,9 @@ suites:
       state_top:
         base:
           '*':
+            # The Salt repository comes from the image, as it comes from
+            # apt-formula in production: `salt.pkgrepo` is not used
             - salt._mapdata
-            - salt.pkgrepo
             - salt.master
             - salt.minion
     verifier:
